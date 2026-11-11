@@ -37,7 +37,7 @@ KEGE Station имитирует рабочее место участника к�
 ### Windows
 
 ```powershell
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/dmitriy28/KEGE
 cd KEGE-Station
 py -3.11 -m venv .venv
 .venv\Scripts\activate
@@ -49,7 +49,7 @@ python run.py
 ### Linux/macOS
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/dmitriy28/KEGE
 cd KEGE-Station
 python3 -m venv .venv
 source .venv/bin/activate
