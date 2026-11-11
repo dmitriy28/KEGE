@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE and OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Build output
+build/
+dist/
+*.spec
+
+# Local application data and logs
+*.sqlite3
+*.db
+logs/
+cache/
+packages/
+exam_files/
+running.session
+native_crash.log
+kege_station.log*
+
+# Exam packages and participant results
+*.kege
+*.kege-result
+source_materials/
+tools/local_builders/
+output/
+
+# Local UI renders
+tmp_ui/
+tmp_ui_check/
+tmp_ui_final/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx

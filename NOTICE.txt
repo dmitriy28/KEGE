@@ -1,0 +1,9 @@
+KEGE Station is an independent educational simulator.
+
+The project is not affiliated with, endorsed by, or distributed by FIPI,
+Rosobrnadzor, or operators of the official computer-based examination system.
+
+Real examination tasks, answer keys, participant results, and third-party
+exam packages are intentionally excluded from this public repository.
+
+Copyright (c) 2026 Dmitriy Chaban
