@@ -66,6 +66,20 @@ python run.py
 
 Windows-сборку необходимо выполнять в Windows: PyInstaller не поддерживает кросс-компиляцию `.exe` из Linux. Для тегов вида `v1.3.0` GitHub Actions автоматически подготовит Windows-артефакт.
 
+## Сборка и установка на Ubuntu 26.04 LTS
+
+Готовые артефакты (`.deb` и `tar.gz`) собирает GitHub Actions в контейнере `ubuntu:26.04` для тегов `v*` (**Actions → Build Linux**). Локально:
+
+```bash
+sudo apt install python3 python3-venv dpkg-dev binutils libegl1 libgl1 libxkbcommon0 \
+  libxkbcommon-x11-0 libxcb-cursor0 libfontconfig1 libdbus-1-3
+./build_linux.sh            # результат в dist/release/ (+ SHA256SUMS)
+sudo apt install ./dist/release/kege-station_1.3.0_amd64.deb
+kege-station
+```
+
+Вариант без установки: `tar xzf kege-station_*_linux_amd64.tar.gz && ./KEGE_Station/KEGE_Station`. Для открытия вложений (xlsx/ods) рекомендуется `libreoffice-calc`. Окно работает и в Wayland (сеанс по умолчанию в Ubuntu 26.04), и в X11. Сборка выполняется на той же архитектуре, что и целевая система (amd64 или arm64).
+
 ## Первый вход эксперта
 
 - пароль по умолчанию: `KEGE-2026`;

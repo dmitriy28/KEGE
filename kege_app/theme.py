@@ -11,7 +11,7 @@ MUTED = "#7d8da7"
 
 
 APP_QSS = r"""
-* { font-family: "Segoe UI", "Arial"; font-size: 14px; color: #10284f; }
+* { font-family: "Segoe UI", "Noto Sans", "Ubuntu", "DejaVu Sans", "Arial"; font-size: 14px; color: #10284f; }
 QMainWindow, QDialog, QWidget#Root { background: #eaf1fc; }
 QToolTip { background: white; color: #10284f; border: 1px solid #9bb0ce; padding: 5px; }
 QLabel#PageTitle { font-size: 32px; font-weight: 300; color: #0b1f3d; }
