@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import sys
 
-from PyQt6.QtGui import QFont, QIcon
+from PyQt6.QtGui import QFont, QGuiApplication, QIcon
 from PyQt6.QtWidgets import QApplication
 
 from kege_app.main_window import MainWindow
@@ -20,11 +20,15 @@ from kege_app.crash_reporting import (
 
 
 def main() -> int:
+    if sys.platform.startswith("linux"):
+        QGuiApplication.setDesktopFileName("kege-station")  # связывает окно с .desktop-файлом (Wayland)
     app = QApplication(sys.argv)
     app.setApplicationName("KEGE Station")
     app.setOrganizationName("KEGE Training")
     app.setWindowIcon(QIcon(str(resource_path("assets", "app_icon.png"))))
-    app.setFont(QFont("Segoe UI", 10))
+    font = QFont("Segoe UI", 10)
+    font.setFamilies(["Segoe UI", "Noto Sans", "Ubuntu", "DejaVu Sans", "Arial"])
+    app.setFont(font)
     app.setStyleSheet(APP_QSS)
     configure_logging()
     install_exception_hooks()

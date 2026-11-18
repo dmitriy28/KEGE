@@ -4,6 +4,7 @@ import json
 import logging
 import os
 import re
+import shutil
 import subprocess
 import sys
 from dataclasses import dataclass, field
@@ -809,6 +810,8 @@ class ExamPage(Page):
                 opened = subprocess.Popen(["open", str(resolved)], start_new_session=True).pid > 0
             else:
                 opened = QDesktopServices.openUrl(QUrl.fromLocalFile(str(resolved)))
+                if not opened and shutil.which("xdg-open"):
+                    opened = subprocess.Popen(["xdg-open", str(resolved)], start_new_session=True).pid > 0
             if not opened:
                 raise OSError("Операционная система не нашла программу для этого типа файла")
         except Exception as exc:

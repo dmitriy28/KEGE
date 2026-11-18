@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=KEGE Station
+Name[ru]=KEGE Station
+Comment=Offline trainer for the Russian computer-based informatics exam
+Comment[ru]=Офлайн-тренажёр компьютерного ЕГЭ по информатике
+Exec=kege-station
+Icon=kege-station
+Terminal=false
+Categories=Education;
+StartupWMClass=kege-station
